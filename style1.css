@@ -1,0 +1,134 @@
+/* Layout */
+
+* {
+  box-sizing: border-box; /* pour maîtriser width et flex-basis */
+}
+
+html {
+  display: flex; flex-direction: column; /* correction bug IE de min-height non appliqué à body */
+}
+
+body {
+  display: flex; /* crée un contexte flex pour ses enfants */
+  flex-direction: column; /* affichage vertical */
+  min-height: 100vh; /* toute la hauteur du viewport */
+  padding: 1em;
+}
+
+.wrapper {
+  flex: 1 1 auto; /* occupe la hauteur restante */
+  display: flex; /* crée un contexte flex pour ses enfants */
+  max-width: 100%;
+}
+
+.block{
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+  max-width: 75%;
+}
+
+nav,
+aside {
+  width: 10em;
+}
+
+article {
+  flex: 1; /* occupe la largeur restante */
+}
+
+nav {
+  order: -1; /* nav s'affiche en premier */
+
+}
+
+
+/* Responsive (fenêtres de moins de 640px) */
+
+@media (max-width: 640px) {
+  .wrapper {
+    flex-direction: column; /* affichage vertical */
+  }
+  nav,
+  aside {
+    width: auto; /* pour écraser la valeur 10em */
+  }
+  nav,
+  aside,
+  article {
+    flex-basis: auto; /* pour écraser la valeur 0, due au flex: 1 */
+  }
+  nav {
+    order: 0; /* nav reprend sa place */
+    max-width: 200px;
+  }
+}
+
+/* Decoration */
+
+body {
+  margin: 0;
+  background: #000010;
+  font-family: arial, sans-serif;
+}
+header,
+nav,
+aside,
+article,
+footer {
+  margin: .1em; 
+  padding: 1em;
+  border-radius: 0px;
+}
+header {
+  background: #01D758;
+  height: 150px;
+  color: #FEFEFE;
+}
+nav {
+  background: #BB0B0B;
+  width: 200px;
+}
+aside {
+  background: #ccccff;
+}
+article {
+  background: #1E7FCB;
+  word-wrap: break-word;
+  color: #FEFEFE;
+}
+footer {
+  background: #ffeebb;
+}
+
+
+
+#navigation {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation li {
+  background: #000010 ;
+  color: #fff ;
+  border: 1px solid #600 ;
+  margin-bottom: 1px ;
+}
+
+#navigation li a {
+  display: block ;
+  background: #000010 ;
+  color: #fff ;
+  font: 1em "Trebuchet MS",Arial,sans-serif ;
+  line-height: 1em ;
+  text-align: center ;
+  text-decoration: none ;
+  padding: 4px 0 ;
+}
+
+#navigation li a:hover, #navigation li a:focus, #navigation li a:active {
+  background: #BB0B0B;
+  text-decoration: underline ;
+}

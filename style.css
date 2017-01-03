@@ -1,0 +1,99 @@
+div.box {
+		width: 700px;
+		height: 300px;
+	}
+
+.bloc {
+	display: block;
+}
+
+#menu{
+list-style-type:none; /* On enlève la puce */ 
+margin: 0; /* On retire les marges intérieures et extérieures */
+padding:0; 
+width:  20%;  /* J'ai mis une largeur pour ne pas prendre toute la largeur de l'écran */
+border : solid 1px #a3c0d5;  /* On applique des bordures à la balise ul */
+border-bottom: none; /* …et on retire celle du bas */
+}
+
+#menu li{
+margin: 0; /* On retire les marges intérieures et extérieures */
+padding: 0; 
+border-bottom: 1px solid #a3c0d5;  /* Ici, on affiche une bordure uniquement en bas */
+}
+
+#left {
+	float: left;
+	width: 300px;
+}
+#right {
+	float: right;
+	width: 300px;
+}
+
+#img p {
+	text-align: center;
+}
+
+#img1:hover {
+	z-index: 4;
+}
+#img2:hover {
+	z-index: 4;
+}
+#img3:hover {
+	z-index: 4;
+}
+
+#img1 {
+	 position: absolute;
+	 z-index: 3;
+}
+#img2 {
+	 position: relative;
+	 top: 50px;
+	 left: 100px;
+	 z-index: 2;
+}
+#img3 {
+	 position: relative;
+	 top: 100px;
+	 left: 20px;
+	 z-index: 1;
+}
+
+#page2 {
+	text-align: right;
+}
+
+
+div#colonne1 {
+	width: 20%;
+	float: left;
+}
+
+div#centre {
+	width: 65%;
+}
+
+div#colonne2 {
+	width: 15%;
+	float: right;
+}
+
+#ImgC1 {
+	width: 100%;
+}
+
+div#centre p {
+	text-align: center;
+}
+
+#ImgC2 {
+	width: 100%;
+}
+
+footer {
+	text-align: right;
+	margin-top: 30%;
+}
